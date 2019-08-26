@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     methods: {
       saveNewTodo: function() {
-          const todoToAdd = {name: this.newTodo, priority: this.newPriority};
+          const todoToAdd = {name: this.newTodo, priority: this.newPriority, status: false};
           this.todos.push(todoToAdd);
           this.newTodo = "";
       },
@@ -22,19 +22,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-
-// methods: {
-//   saveNewItem: function() {
-//     if (this.newItem !== "") {
-//     const itemToAdd = {name: this.newItem, purchased: false};
-//     this.items.push(itemToAdd);
-//     this.newItem = "";
-//     };
-//   },
-//   buyItem: function(index) {
-//     this.items[index].purchased = true;
-//   }
-// }
-// });
-// });
