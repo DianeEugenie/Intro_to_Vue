@@ -29,13 +29,20 @@ li button {
 	cursor: pointer;
 }
 
-li.low, .green {
+li.low {
 	border: 2px solid #1a681e;
+
+}
+
+li.high {
+	border: 2px solid #f2360c;
+  color: #f2360c;
+}
+.green {
 	color: #1a681e;
 }
 
-li.high, .red {
-	border: 2px solid #f2360c;
+.red {
   color: #f2360c;
 }
 
@@ -50,4 +57,9 @@ button{
 	color: #fff;
 	cursor: pointer;
 	border: 1px solid #000;
+}
+
+.addNewItem {
+  display: flex;
+  flex-direction: row;
 }
