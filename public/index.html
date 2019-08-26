@@ -12,6 +12,9 @@
     <ul>
       <li v-for="todo in todos">{{todo}}</li>
     </ul>
+
+    <input type="text" v-model="newToDo" />
+    <button @click="saveNewToDo">Save New Todo!</button>
   </div>
 
 </body>
