@@ -20,7 +20,6 @@
     <ul>
       <li v-for="(todo, index) in todos" :class="(todo.priority === 'high') ? 'high':'low'">
         <span>{{todo.name}}</span>
-        <span>{{todo.priority}}</span>
         <span v-if="todo.status">Done</span>
         <button v-if="!todo.status" @click="doneTodo(index)">Did You Really?</button>
 
