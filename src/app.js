@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {name: "Washing", priority: "low"},
       {name: "Feeding the doggos", priority: "high"}],
       newTodo: "",
-      newPriority: ""
+      newPriority: "high"
     },
     methods: {
       saveNewTodo: function() {
