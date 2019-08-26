@@ -5,17 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="./js/bundle.js"></script>
-  <title>Document</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <title>My Todos!</title>
 </head>
 <body>
   <div id="app">
 
     <input type="text" v-model="newTodo" />
+    <input class="red" type="radio" name="priority" value="high" v-model="newPriority"><span class="red">High</span>
+    <input class="green" type="radio" name="priority" value="low" v-model="newPriority"><span class="green">Low</span>
     <button @click="saveNewTodo">Save New Todo!</button>
 
 
+<!-- 'input[name="priority"]:checked' -->
     <ul>
-      <li v-for="todo in todos">{{todo.name}}</li>
+      <li v-for="todo in todos" :class="(todo.priority === 'high') ? 'high':'low'">
+        <span>{{todo.name}}</span>
+
+      </li>
     </ul>
 
 

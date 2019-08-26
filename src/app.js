@@ -7,15 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
       todos: [{name: "Dishes", priority: "high"},
       {name: "Washing", priority: "low"},
       {name: "Feeding the doggos", priority: "high"}],
-      newTodo: ""
+      newTodo: "",
+      newPriority: ""
     },
     methods: {
       saveNewTodo: function() {
-        if (this.newTodo !== "") {
-          // const todoToAdd =
-          this.todos.push(this.newTodo);
+          const todoToAdd = {name: this.newTodo, priority: this.newPriority};
+          this.todos.push(todoToAdd);
           this.newTodo = "";
-        };
       }
     }
   });
